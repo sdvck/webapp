@@ -1,0 +1,23 @@
+<div class="row py-3">
+  <div class="col-5 offset-2">
+    <button class="btn btn-info" (click)="getPosts()" title="Reload">Reload</button>
+  </div>
+  <div class="col-5 float-right">
+    <span class="pr-5">Likes: {{ likesCount }}</span>
+    <span>Comments: {{ commentsCount }}</span>
+  </div>
+</div>
+
+<!-- Posts -->
+<div class="row">
+  <div *ngIf="hasPosts" class="col-10 offset-2">
+    <ul class="list-group">
+      <li class="list-group-item w-75 p-5" *ngFor="let post of posts">
+        <app-post [post]="post"></app-post>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!hasPosts" class="col-12 text-center">
+    <h3>There are no posts in the news feed</h3>
+  </div>
+</div>
