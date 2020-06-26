@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { routes } from './routes/comments.routes';
 
-import { CommentsComponent } from './comments.component';
+import { CommentsComponent } from './components/comments.component';
 
 @NgModule({
   imports: [
